@@ -4,15 +4,7 @@
 }
 
 .header-tablet {
-  // background: deepskyblue;
   height: 45em;
-  // background-image: url("https://res.cloudinary.com/db20zgpmk/image/upload/v1520775256/Background1.png");
-  // background-position: 50% 0px, 0px 0px;
-  //   background-size: cover, auto;
-  //   background-repeat: no-repeat, repeat;
-  //   background-attachment: fixed, scroll;
-
-  // HEADER
   header {
     display: flex;
     flex-flow: row wrap;
@@ -28,13 +20,11 @@
       }
     }
 
-    // Mobile nav bars
     .navMobile {
-      display: none;
+      display: block;
       position: absolute;
       top: 0;
       right: 0;
-      z-index: 2;
       height: 3em;
       width: 3em;
       cursor: pointer;
@@ -63,20 +53,33 @@
       }
     }
 
-    // Navigation
     .navigation {
-      flex: 1 80%;
       list-style: none;
-      margin: 0;
-
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-
-      -webkit-flex-flow: row wrap;
-      justify-content: flex-end;
+      position: absolute;
+      top: 4em;
+      left: 0;
+      right: 0;
+      background: deepskyblue;
+      flex: 1 100%;
+      -webkit-flex-flow: column wrap;
+      flex-flow: column wrap;
+      padding: 0;
+      max-height: 0;
+      transition: max-height 0.15s ease-out;
+      overflow: hidden;
+      &.active {
+        max-height: 500px;
+        transition: max-height 0.5s ease-in;
+      }
+      a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(255,255,255,0.3);
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+      }
+      li:last-of-type a {
+        border-bottom: none;
+      }
     }
 
     .navigation a {
@@ -88,47 +91,6 @@
 
     .navigation a:hover {
       background: darken(deepskyblue, 2%);
-    }
-
-    @media all and (max-width: 800px) {
-      .navigation {
-        justify-content: space-around;
-      }
-    }
-
-    @media all and (max-width: 600px) {
-      .navMobile {
-        display: block;
-      }
-
-      .navigation {
-        position: absolute;
-        top: 4em;
-        left: 0;
-        right: 0;
-        background: grey;
-        flex: 1 100%;
-        -webkit-flex-flow: column wrap;
-        flex-flow: column wrap;
-        padding: 0;
-        margin-top: -20em;
-        transition: margin 1s linear;
-        &.active {
-          margin-top: 0;
-        }
-      }
-
-      .navigation a {
-        text-align: center;
-        padding: 10px;
-        border-top: 1px solid rgba(255,255,255,0.3);
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-      }
-
-
-      .navigation li:last-of-type a {
-        border-bottom: none;
-      }
     }
   }
 
@@ -200,11 +162,35 @@
 @media all and (min-width: 768px) {
   .header-tablet {
     height: 34em;
-    .intro {
+    header {
       .logo {}
-      .navMobile {}
-      .navigation {}
+      .navMobile {
+        display: none;
+      }
+      .navigation {
+        flex: 1 80%;
+        margin: 0;
+        max-height: 500px;
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-flow: row wrap;
+        justify-content: flex-end;
+        top: 0;
+        right: 8.33333%;
+
+        background: transparent;
+
+        a {
+          border: none;
+        }
+      }
     }
+    .intro {}
     .content {
       .intro {
         flex: 1 50%;
