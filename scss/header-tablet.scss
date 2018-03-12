@@ -1,18 +1,11 @@
 .header-tablet {
   height: 45em;
   header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    flex-flow: row wrap;
     color: white;
     .logo {
-      -webkit-box-flex: 1;
-          -ms-flex: 1 20%;
-              flex: 1 20%;
+      flex: 1 20%;
       padding: 1em;
       padding-left: 0;
       a {
@@ -44,8 +37,6 @@
           position: absolute;
           display: block;
           content: '';
-          -webkit-transition: all 300ms ease-in-out;
-          -o-transition: all 300ms ease-in-out;
           transition: all 300ms ease-in-out;
         }
         span:before {
@@ -64,23 +55,15 @@
       left: 0;
       right: 0;
       background: deepskyblue;
-      -webkit-box-flex: 1;
-          -ms-flex: 1 100%;
-              flex: 1 100%;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-flow: column wrap;
-              flex-flow: column wrap;
+      flex: 1 100%;
+      -webkit-flex-flow: column wrap;
+      flex-flow: column wrap;
       padding: 0;
       max-height: 0;
-      -webkit-transition: max-height 0.15s ease-out;
-      -o-transition: max-height 0.15s ease-out;
       transition: max-height 0.15s ease-out;
       overflow: hidden;
       &.active {
         max-height: 500px;
-        -webkit-transition: max-height 0.5s ease-in;
-        -o-transition: max-height 0.5s ease-in;
         transition: max-height 0.5s ease-in;
       }
       a {
@@ -108,33 +91,17 @@
 
   // CONTENT
   .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-flow: row wrap;
+    align-items: center;
     .intro {
-      -webkit-box-flex: 1;
-          -ms-flex: 1 100%;
-              flex: 1 100%;
+      flex: 1 100%;
       padding: 10% 0 20%;
       text-align: center;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-flow: row wrap;
-              flex-flow: row wrap;
+      flex-flow: row wrap;
       .logo {
-        -webkit-box-flex: 1;
-            -ms-flex: 1 100%;
-                flex: 1 100%;
+        flex: 1 100%;
         img {
           width: 4.5em;
           border-radius: 10px;
@@ -145,29 +112,18 @@
         width: 100%;
       }
       .links {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-flow: row wrap;
-                flex-flow: row wrap;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        flex-flow: row wrap;
+        justify-content: center;
         width: 100%;
         a {
-          -webkit-box-flex: 1;
-              -ms-flex: 1 100%;
-                  flex: 1 100%;
+          flex: 1 100%;
           padding: 1em;
           margin: 0 20% .5em;
           border-radius: 5px;
           text-decoration: none;
           &.download {
             background: pink;
-            background-image: -webkit-linear-gradient(315deg, #ff8e64, #ffe641);
-            background-image: -o-linear-gradient(315deg, #ff8e64, #ffe641);
             background-image: linear-gradient(135deg, #ff8e64, #ffe641);
             color: white;
           }
@@ -179,9 +135,7 @@
       }
     }
     .tablet {
-      -webkit-box-flex: 1;
-          -ms-flex: 1 100%;
-              flex: 1 100%;
+      flex: 1 100%;
       .device {
         background: white;
         width: 15em;
@@ -190,8 +144,7 @@
         margin: 0 auto;
         border-radius: 50px;
         text-align: center;
-        -webkit-box-shadow: 0 12px 6px -6px #EAEBED;
-                box-shadow: 0 12px 6px -6px #EAEBED;
+        box-shadow: 0 12px 6px -6px #EAEBED;
         img {
           width: 90%;
           height: 100%;
@@ -210,20 +163,20 @@
         display: none;
       }
       .navigation {
-        -webkit-box-flex: 1;
-            -ms-flex: 1 80%;
-                flex: 1 80%;
+        flex: 1 80%;
         margin: auto;
         // width: 50%;
         max-height: 500px;
         margin-left: 20%;
 
         display: -webkit-box;
+        display: -moz-box;
         display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
-        -webkit-box-pack: end;
-            -ms-flex-pack: end;
-                justify-content: flex-end;
+
+        -webkit-flex-flow: row wrap;
+        justify-content: flex-end;
         top: 0;
         right: 8.33333%;
 
@@ -237,9 +190,7 @@
     .intro {}
     .content {
       .intro {
-        -webkit-box-flex: 1;
-            -ms-flex: 1 50%;
-                flex: 1 50%;
+        flex: 1 50%;
         text-align: left;
         .links {
           display: block;
@@ -251,13 +202,9 @@
         }
       }
       .tablet {
-        -webkit-box-flex: 1;
-            -ms-flex: 1 50%;
-                flex: 1 50%;
+        flex: 1 50%;
         margin-top: 4em;
-        -ms-flex-item-align: center;
-            -ms-grid-row-align: center;
-            align-self: center;
+        align-self: center;
         .device {
           margin-top: -2em;
           height: 35em;
