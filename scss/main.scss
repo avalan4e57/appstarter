@@ -3,7 +3,7 @@ body {
   padding: 0;
   position: relative;
   &::before {
-    background: url("http://uploads.webflow.com/58c00327a3a19f2169a348cf/58c387c6b6b941e437becd29_bg-gradient-1.svg") no-repeat center center;
+    background: url("img/Background1.png") no-repeat center center;
     background-size: cover;
     content: ' ';
     height: 100%;
@@ -17,7 +17,8 @@ body {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 200;
 }

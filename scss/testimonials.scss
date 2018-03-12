@@ -3,16 +3,31 @@
   .main-container {
     border-bottom: 1px solid #E7E8EA;
     .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-flow: row wrap;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
       padding: 10% 0;
       .preface {
-        flex: 1 100%;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 100%;
+                flex: 1 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
         .title {
           .stars {
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
             width: fit-content;
             i {
               margin-right: -.3em;
@@ -60,26 +75,42 @@
         }
       }
       .examples {
-        flex: 1 100%;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 100%;
+                flex: 1 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
         .card {
           background: #ffffff;
           padding: 0 4%;
           margin-bottom: 1em;
           border-radius: 5px;
           width: 85%;
-          box-shadow: 0 12px 6px -6px #EAEBED;
+          -webkit-box-shadow: 0 12px 6px -6px #EAEBED;
+                  box-shadow: 0 12px 6px -6px #EAEBED;
           .content {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-flow: row nowrap;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: row nowrap;
+                    flex-flow: row nowrap;
             width: 100%;
             padding: 4% 0;
             img {
               width: 10%;
               border-radius: 50%;
-              align-self: flex-start;
+              -ms-flex-item-align: start;
+                  align-self: flex-start;
             }
             p {
               font-style: italic;
@@ -93,9 +124,16 @@
             font-size: .5em;
             border-top: 1px solid #E8E9EB;
             padding: 2% 0 4%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: row nowrap;
+                    flex-flow: row nowrap;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
             .twitter-link {
               a {
                 color: #D3D5D9;
@@ -104,13 +142,20 @@
           }
         }
         .card-right {
-            align-self: flex-end;
+            -ms-flex-item-align: end;
+                align-self: flex-end;
           .content {
-            flex-direction: row-reverse;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: reverse;
+                -ms-flex-direction: row-reverse;
+                    flex-direction: row-reverse;
             text-align: right;
           }
           footer {
-            flex-direction: row-reverse;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: reverse;
+                -ms-flex-direction: row-reverse;
+                    flex-direction: row-reverse;
           }
         }
       }
@@ -123,10 +168,14 @@
     .main-container {
       .container {
         .preface {
-          flex: 1 40%;
+          -webkit-box-flex: 1;
+              -ms-flex: 1 40%;
+                  flex: 1 40%;
         }
         .examples {
-          flex: 1 50%;
+          -webkit-box-flex: 1;
+              -ms-flex: 1 50%;
+                  flex: 1 50%;
           padding-left: 8%;
         }
       }
