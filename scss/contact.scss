@@ -1,0 +1,76 @@
+.contact {
+  // background-image: url("http://uploads.webflow.com/58c00327a3a19f2169a348cf/58c387c6b6b941e437becd29_bg-gradient-1.svg");
+  // background-position: 50% 0px, 0px 0px;
+  // background-size: cover, auto;
+  // background-repeat: no-repeat, repeat;
+  // background-attachment: fixed, scroll;
+  .main-container {
+    .container {
+      // width: 80%;
+      margin: 0 auto;
+      padding: 10% 0;
+      .preface {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        color: white;
+        p {
+          font-size: .7em;
+          line-height: 2;
+        }
+      }
+      .contact-form {
+        background: #ffffff;
+        padding: 10%;
+        border-radius: 5px;
+        form {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+          input[type="text"], textarea {
+            flex: 1 100%;
+            background: #f8f9fa;
+            border-radius: 5px;
+            padding: 1em;
+            border: 1px solid #E8E9EB;
+            font-size: .6em;
+            margin-bottom: 1em;
+            &::placeholder {
+              color: #BCBFC4;
+            }
+          }
+          textarea {
+            resize: none;
+          }
+          input[type="submit"] {
+            margin: 1em auto;
+            padding: 1em 1.5em;
+            border-radius: 5px;
+            background-image: linear-gradient(135deg, #FD8E69, #FEE453);
+            border: none;
+            color: white;
+            font-size: .8em;
+            letter-spacing: .1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .contact {
+    .main-container {
+      .container {
+        width: 80%;
+        .contact-form {
+          form {
+            input[type="text"] {
+              flex: 0 49%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

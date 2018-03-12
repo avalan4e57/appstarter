@@ -1,0 +1,62 @@
+.getting-started {
+  // background: url("http://uploads.webflow.com/58c00327a3a19f2169a348cf/58c387c6b6b941e437becd29_bg-gradient-1.svg") no-repeat center center;
+  // background-position: 50% 0px, 0px 0px;
+  // background-size: cover, auto;
+  // background-repeat: no-repeat, repeat;
+  // background-attachment: fixed, scroll;
+  padding: 5em 0;
+  .main-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    .preface {
+      flex: 1 100%;
+      color: white;
+      text-align: center;
+    }
+    .links {
+      flex: 0 fit-content;
+      padding: 1em 0;
+      margin: 1em auto;
+      a {
+        text-decoration: none;
+        padding: 1em 2.5em;
+        background: pink;
+        border-radius: 5px;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 1em;
+        &.buy {
+          color: white;
+          background-image: linear-gradient(135deg, #FD8E69, #FEE453);
+        }
+        &.free {
+          color: black;
+          background: #FFFFFF;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .getting-started {
+    .main-container {
+      .preface {
+        flex: 1 50%;
+        text-align: left;
+      }
+      .links {
+        flex: 1 50%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        a {
+          margin-left: 1em;
+        }
+      }
+    }
+  }
+}

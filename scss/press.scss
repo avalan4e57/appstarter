@@ -1,0 +1,14 @@
+.press {
+  .main-container {
+    background: #FFFFFF;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin: auto;
+    img {
+        padding: 1em;
+    }
+  }
+}
